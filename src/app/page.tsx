@@ -1,22 +1,24 @@
-"use client";
-
-import { useEffect } from "react";
-import api from "@/lib/axios";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function Home() {
-  useEffect(() => {
-    const load = async () => {
-      const { data } = await api.get("/");
-
-      console.log(data);
-    };
-
-    load();
-  }, []);
-
   return (
-    <main className="p-10">
-      <h1>SkillBridge AI</h1>
+    <main>
+      <Container>
+        <div className="py-24">
+          <SectionTitle
+            title="SkillBridge AI"
+            subtitle="Hire Smarter. Grow Faster."
+          />
+
+          <div className="flex justify-center">
+            <Button>
+              Explore Developers
+            </Button>
+          </div>
+        </div>
+      </Container>
     </main>
   );
 }
