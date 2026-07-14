@@ -1,11 +1,13 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
     <main>
-      <Container>
+      <Hero />
+      {/* <Container>
         <div className="py-24">
           <SectionTitle
             title="SkillBridge AI"
@@ -18,7 +20,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </Container>
+      </Container> */}
     </main>
   );
 }
