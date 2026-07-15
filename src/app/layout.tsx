@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "@/components/layout/Navbar";
 import Providers from "@/components/theme/theme-provider";
@@ -38,6 +39,17 @@ export default function RootLayout({
 
           <main className="flex-1">
             {children}
+
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+              toastOptions={{
+                duration: 2500,
+                style: {
+                  borderRadius: "12px",
+                },
+              }}
+            />
           </main>
           <Footer />
         </Providers>
